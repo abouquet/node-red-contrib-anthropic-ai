@@ -1,7 +1,21 @@
 {
   "name": "node-red-contrib-claude-ai",
-  "module": "index.ts",
-  "type": "module",
+  "description": "Node-RED node for Claude AI (Anthropic) integration",
+  "main": "dist/claude.js",
+  "type": "commonjs",
+  "scripts": {
+    "build":  "bun build ./src/claude.ts --outdir ./dist --target node --format cjs",
+    "prepare": "bun run build",
+    "test": "bun test"
+  },
+  "keywords": [
+    "node-red",
+    "anthropic",
+    "claude",
+    "ai",
+    "llm",
+    "chatbot"
+  ],
   "devDependencies": {
     "@types/bun": "latest",
     "@types/node": "^22.8.1",
@@ -12,5 +26,10 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.30.1"
+  },
+  "node-red": {
+    "nodes": {
+      "claude": "dist/claude.js"
+    }
   }
 }

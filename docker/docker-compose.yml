@@ -1,0 +1,21 @@
+services:
+  nodered:
+    image: nodered/node-red:latest
+    container_name: mynodered
+    env_file: .env
+    ports:
+      - "1880:1880"
+    volumes:
+      - node_red_data:/data
+    networks:
+      - nodered-net
+
+volumes:
+  node_red_data:
+    name: node_red_data
+    external: true
+
+networks:
+  nodered-net:
+    name: nodered-net
+    driver: bridge

@@ -1,0 +1,36 @@
+<script type="text/html" data-template-name="claude">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-apiKey"><i class="fa fa-lock"></i> API Key</label>
+        <input type="password" id="node-input-apiKey" placeholder="Anthropic API Key">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="claude">
+    <p>A Node-RED node for interacting with Claude AI</p>
+</script>
+
+<script type="text/javascript">
+    console.log("Registering Claude node type in HTML...");
+    RED.nodes.registerType('claude', {
+        category: "storage-output",           // Essayons une catégorie standard
+        color: "#a6bbcf",
+        defaults: {
+            name: {value:""},
+            apiKey: {value:"", required:true}
+        },
+        inputs:1,
+        outputs:1,
+        label: function() {
+            return this.name || "claude";
+        },
+        paletteLabel: "claude",
+        oneditprepare: function() {
+            console.log("Node edit dialog opened");
+        }
+    });
+    console.log("Claude node type registered in HTML");
+</script>

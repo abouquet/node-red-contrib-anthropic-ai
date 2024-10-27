@@ -1,0 +1,11 @@
+services:
+  nodered:
+    volumes:
+      - node_red_data:/data
+      - ../:/data/node_modules/node-red-contrib-claude-ai
+      - ./config/settings.js:/data/settings.js
+    environment:
+      - NODE_RED_ENABLE_PROJECTS=false
+      - NODE_DEBUG=node-red:*
+      - DEBUG=node-red:*
+      - NODE_RED_ENABLE_SAFE_MODE=false
