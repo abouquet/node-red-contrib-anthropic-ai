@@ -1,4 +1,4 @@
-# node-red-contrib-claude-aI
+# node-red-contrib-anthropic-aI
 
 A Node-RED node for Anthropic Claude API interaction
 
@@ -7,7 +7,7 @@ A Node-RED node for Anthropic Claude API interaction
 * Install it on node red app
 
 ```bash
-npm install node-red-contrib-claude-ai
+npm install node-red-contrib-anthropic-ai
 ```
 
 ## Contributions

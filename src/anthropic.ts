@@ -86,5 +86,5 @@ module.exports = function(RED: any) {
         });
     }
 
-    RED.nodes.registerType("claude", ClaudeNode);
+    RED.nodes.registerType("anthropic-ai", ClaudeNode);
 }
