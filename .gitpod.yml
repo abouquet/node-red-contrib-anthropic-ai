@@ -3,7 +3,7 @@
 # and commit this file to your remote git repository to share the goodness with others.
 
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
-image: gitpod/workspace-bun
+image: gitpod/workspace-bun:2024-10-28-06-36-33
 
 tasks:
   - init: bun install && bun run build
